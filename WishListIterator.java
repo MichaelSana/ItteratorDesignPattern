@@ -6,19 +6,24 @@ public class WishListIterator implements Iterator {
     private int position;
 
     public WishListIterator(Item[] items){
-
+        this.items = items;
     }
 
     @Override
     public boolean hasNext() {
-        // TODO Auto-generated method stub
-        return false;
+        if(position >= items.length || items[position] == null){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 
     @Override
     public Object next() {
-        // TODO Auto-generated method stub
-        return null;
+        Object object = items[position];
+        position = position + 1;
+        return object;
     }
     
 }
