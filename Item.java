@@ -6,12 +6,13 @@ public class Item {
     private double price;
 
     public Item(String title, String description, double price){
-
+        this.title = title;
+        this.description = description;
+        this.price = price;
     }
 
     public String toString(){
-        return "";
-
+        return (title + ": " +description + " " + price);
     }
 
     public double getPrice(){
@@ -20,6 +21,6 @@ public class Item {
     }
 
     public void print(){
-
+        toString();
     }
 }
